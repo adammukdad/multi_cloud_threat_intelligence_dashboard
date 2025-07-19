@@ -1,0 +1,57 @@
+[
+  {
+    "correlationID": "correl_203-0-113-15",
+    "sourceIP": "203.0.113.15",
+    "cloudsInvolved": [
+      "AWS",
+      "Azure"
+    ],
+    "eventTypes": [
+      "PrivilegeEscalation",
+      "AnomalousLogin"
+    ],
+    "users": [
+      "john.doe@contoso.com",
+      "iam-user-02"
+    ],
+    "severity": "Critical",
+    "events": [
+      {
+        "cloud": "AWS",
+        "eventType": "PrivilegeEscalation",
+        "user": "iam-user-02",
+        "assumedRole": "arn:aws:iam::123456789012:role/AdminRole",
+        "action": "AttachRolePolicy",
+        "targetRole": "AdminRole",
+        "policyAttached": "arn:aws:iam::aws:policy/AdministratorAccess",
+        "sourceIP": "203.0.113.15",
+        "timestamps": [
+          "2025-07-13T14:02:00Z",
+          "2025-07-13T14:03:00Z"
+        ],
+        "severity": "High",
+        "geo": "Unknown"
+      },
+      {
+        "cloud": "Azure",
+        "eventType": "AnomalousLogin",
+        "sourceIP": "203.0.113.15",
+        "userTargeted": "john.doe@contoso.com",
+        "failedAttempts": 3,
+        "riskLevels": [
+          "medium",
+          "high",
+          "high"
+        ],
+        "riskState": "confirmedCompromised",
+        "geo": "User did not pass the MFA challenge. | Moscow, RU",
+        "timestamps": [
+          "2025-07-13T14:10:00Z",
+          "2025-07-13T14:11:00Z",
+          "2025-07-13T14:12:00Z"
+        ],
+        "severity": "High"
+      }
+    ]
+  }
+]

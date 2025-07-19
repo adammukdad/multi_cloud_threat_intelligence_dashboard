@@ -1,0 +1,53 @@
+[
+  {
+    "userPrincipalName": "john.doe@contoso.com",
+    "ipAddress": "203.0.113.15",
+    "location": {
+      "city": "Moscow",
+      "countryOrRegion": "RU"
+    },
+    "status": {
+      "errorCode": 50074,
+      "failureReason": "User did not pass the MFA challenge."
+    },
+    "createdDateTime": "2025-07-13T14:10:00Z",
+    "appDisplayName": "Office 365",
+    "riskLevelDuringSignIn": "medium",
+    "riskState": "atRisk",
+    "conditionalAccessStatus": "failure"
+  },
+  {
+    "userPrincipalName": "john.doe@contoso.com",
+    "ipAddress": "203.0.113.15",
+    "location": {
+      "city": "Moscow",
+      "countryOrRegion": "RU"
+    },
+    "status": {
+      "errorCode": 50053,
+      "failureReason": "Account is locked because user tried to sign in too many times with an incorrect user ID or password."
+    },
+    "createdDateTime": "2025-07-13T14:11:00Z",
+    "appDisplayName": "Office 365",
+    "riskLevelDuringSignIn": "high",
+    "riskState": "confirmedCompromised",
+    "conditionalAccessStatus": "failure"
+  },
+  {
+    "userPrincipalName": "john.doe@contoso.com",
+    "ipAddress": "203.0.113.15",
+    "location": {
+      "city": "Moscow",
+      "countryOrRegion": "RU"
+    },
+    "status": {
+      "errorCode": 50076,
+      "failureReason": "User password expired."
+    },
+    "createdDateTime": "2025-07-13T14:12:00Z",
+    "appDisplayName": "Office 365",
+    "riskLevelDuringSignIn": "high",
+    "riskState": "confirmedCompromised",
+    "conditionalAccessStatus": "failure"
+  }
+]

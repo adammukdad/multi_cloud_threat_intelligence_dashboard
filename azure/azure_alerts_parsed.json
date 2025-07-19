@@ -1,0 +1,22 @@
+[
+  {
+    "cloud": "Azure",
+    "eventType": "AnomalousLogin",
+    "sourceIP": "203.0.113.15",
+    "userTargeted": "john.doe@contoso.com",
+    "failedAttempts": 3,
+    "riskLevels": [
+      "medium",
+      "high",
+      "high"
+    ],
+    "riskState": "confirmedCompromised",
+    "geo": "User did not pass the MFA challenge. | Moscow, RU",
+    "timestamps": [
+      "2025-07-13T14:10:00Z",
+      "2025-07-13T14:11:00Z",
+      "2025-07-13T14:12:00Z"
+    ],
+    "severity": "High"
+  }
+]

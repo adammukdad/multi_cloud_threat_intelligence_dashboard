@@ -1,0 +1,49 @@
+[
+  {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "IAMUser",
+      "userName": "iam-user-02"
+    },
+    "eventTime": "2025-07-13T14:01:00Z",
+    "eventSource": "signin.amazonaws.com",
+    "eventName": "ConsoleLogin",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.0.113.15",
+    "responseElements": {
+      "ConsoleLogin": "Success"
+    }
+  },
+  {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "IAMUser",
+      "userName": "iam-user-02"
+    },
+    "eventTime": "2025-07-13T14:02:00Z",
+    "eventSource": "sts.amazonaws.com",
+    "eventName": "AssumeRole",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.0.113.15",
+    "requestParameters": {
+      "roleArn": "arn:aws:iam::123456789012:role/AdminRole",
+      "roleSessionName": "EscalationSession"
+    }
+  },
+  {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "AssumedRole",
+      "arn": "arn:aws:sts::123456789012:assumed-role/AdminRole/EscalationSession"
+    },
+    "eventTime": "2025-07-13T14:03:00Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "AttachRolePolicy",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.0.113.15",
+    "requestParameters": {
+      "roleName": "AdminRole",
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+    }
+  }
+]

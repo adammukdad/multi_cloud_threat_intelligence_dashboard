@@ -1,0 +1,47 @@
+[
+  {
+    "cloud": "AWS",
+    "eventType": "BruteForceLogin",
+    "sourceIP": "198.51.100.1",
+    "userTargeted": "iam-user-01",
+    "failedAttempts": 6,
+    "timestamps": [
+      "2025-07-13T13:51:00Z",
+      "2025-07-13T13:52:00Z",
+      "2025-07-13T13:53:00Z",
+      "2025-07-13T13:54:00Z",
+      "2025-07-13T13:55:00Z",
+      "2025-07-13T13:56:00Z"
+    ],
+    "severity": "High",
+    "geo": "Unknown"
+  },
+  {
+    "cloud": "AWS",
+    "eventType": "PrivilegeEscalation",
+    "user": "iam-user-02",
+    "assumedRole": "arn:aws:iam::123456789012:role/AdminRole",
+    "action": "AttachRolePolicy",
+    "targetRole": "AdminRole",
+    "policyAttached": "arn:aws:iam::aws:policy/AdministratorAccess",
+    "sourceIP": "203.0.113.15",
+    "timestamps": [
+      "2025-07-13T14:02:00Z",
+      "2025-07-13T14:03:00Z"
+    ],
+    "severity": "High",
+    "geo": "Unknown"
+  },
+  {
+    "cloud": "AWS",
+    "eventType": "S3PublicExposure",
+    "bucketName": "customer-records-bucket",
+    "detectionTime": [
+      "2025-07-13T14:07:00Z",
+      "2025-07-13T14:07:00Z"
+    ],
+    "severity": "High",
+    "geo": "Unknown",
+    "source": "GuardDuty"
+  }
+]
