@@ -1,4 +1,9 @@
 # ☁️ Multi-Cloud Threat Intelligence Dashboard
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Enabled-red?logo=streamlit)
+![Azure](https://img.shields.io/badge/Azure-Integrated-blue?logo=microsoftazure)
+![AWS](https://img.shields.io/badge/AWS-Supported-orange?logo=amazonaws)
+
 
 Correlate and visualize AWS + Azure security events with a cross-cloud security monitoring dashboard built using Python and Streamlit.
 
@@ -19,88 +24,6 @@ This dashboard aggregates and correlates security alerts from AWS CloudTrail and
 
 ---
 
-## 🧰 Tech Stack
-
-- **Languages**: Python  
-- **Cloud Providers**: AWS, Azure  
-- **Framework**: Streamlit  
-- **Data Format**: JSON  
-
----
-
-## 📁 Project Structure
-
-```
-multi_cloud_threat_intelligence_dashboard/
-│
-├── aws/
-│   ├── cloudtrail_bruteforce.json
-│   ├── cloudtrail_escalation.json
-│   ├── guardduty_s3_public.json
-│   ├── lambda_parser.py
-│   └── aws_alerts_parsed.json
-│
-├── azure/
-│   ├── aad_signin_logs.json
-│   ├── function_parser.py
-│   └── azure_alerts_parsed.json
-│
-├── correlation_engine/
-│   ├── correlate_alerts.py
-│   └── correlated_alerts.json
-│
-├── app.py
-└── README.md
-```
-
----
-
-## 🚀 How to Run
-
-> Make sure Streamlit is installed. If not, run:
-
-```bash
-pip install streamlit
-```
-
-Then start the dashboard:
-
-```bash
-streamlit run app.py
-```
-
----
-
-## 📸 Screenshot
-
-![Dashboard Preview](dashboard_screenshot.png)
-
----
-
-## 🧠 Future Enhancements
-
-- Integrate real-time log ingestion (e.g., from S3 buckets or Azure blob storage)  
-- Add alert severity scoring  
-- Build alert timelines and maps  
-
----
-
-## 📌 Author
-
-Built by Adam Mukdad  
-[GitHub Profile](https://github.com/adammukdad)
-
----
-
-## 🎯 Objectives Met
-
-- Design and implement a unified dashboard to monitor security alerts across AWS and Azure environments  
-- Normalize and parse native JSON logs from CloudTrail, GuardDuty, and Azure Sign-In sources  
-- Build a correlation engine that identifies cross-cloud threats by matching shared IOCs (e.g., malicious IPs)  
-- Visualize correlated events in a clean, filterable, and interactive Streamlit dashboard
-
----
-
 ## 📊 Qualified and Quantified Impact
 
 - Correlated **50+ AWS** and **Azure alerts** using custom Python logic, reducing analysis time from minutes to seconds  
@@ -110,6 +33,12 @@ Built by Adam Mukdad
 
 ---
 
+## 🎯 Objectives Met
+
+- Design and implement a unified dashboard to monitor security alerts across AWS and Azure environments  
+- Normalize and parse native JSON logs from CloudTrail, GuardDuty, and Azure Sign-In sources  
+- Build a correlation engine that identifies cross-cloud threats by matching shared IOCs (e.g., malicious IPs)  
+- Visualize correlated events in a clean, filterable, and interactive Streamlit dashboard
 
 ---
 
@@ -170,6 +99,67 @@ Built by Adam Mukdad
 }
 ```
 
+## 📁 Project Structure
+
+```
+multi_cloud_threat_intelligence_dashboard/
+│
+├── aws/
+│   ├── cloudtrail_bruteforce.json
+│   ├── cloudtrail_escalation.json
+│   ├── guardduty_s3_public.json
+│   ├── lambda_parser.py
+│   └── aws_alerts_parsed.json
+│
+├── azure/
+│   ├── aad_signin_logs.json
+│   ├── function_parser.py
+│   └── azure_alerts_parsed.json
+│
+├── correlation_engine/
+│   ├── correlate_alerts.py
+│   └── correlated_alerts.json
+│
+├── app.py
+└── README.md
+```
+
+## 🧰 Tech Stack
+
+- **Languages**: Python  
+- **Cloud Providers**: AWS, Azure  
+- **Framework**: Streamlit  
+- **Data Format**: JSON  
+
+---
+
+## 🚀 How to Run
+
+> Make sure Streamlit is installed. If not, run:
+
+```bash
+pip install streamlit
+```
+
+Then start the dashboard:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📸 Screenshot
+
+![Dashboard Preview](dashboard_screenshot.png)
+
+---
+
+## 🧠 Future Enhancements
+
+- Integrate real-time log ingestion (e.g., from S3 buckets or Azure blob storage)  
+- Add alert severity scoring  
+- Build alert timelines and maps  
 
 ---
 
@@ -192,3 +182,8 @@ Built by Adam Mukdad
 - I built a functioning system that performs **log parsing, alert normalization, IOC correlation, and visualization**  
 - I’ve used **Python to replicate key features of commercial SIEMs and XDRs**, tailored for AWS and Azure  
 - This dashboard is extensible, fast, and designed with real-world triage and detection workflows in mind
+
+---
+
+Built by Adam Mukdad  
+[GitHub Profile](https://github.com/adammukdad)
