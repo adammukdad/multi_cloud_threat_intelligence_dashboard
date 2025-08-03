@@ -184,6 +184,8 @@ streamlit run app.py
 - This dashboard is extensible, fast, and designed with real-world triage and detection workflows in mind
 
 ---
-
-Built by Adam Mukdad  
-[GitHub Profile](https://github.com/adammukdad)
+## 👤 Author
+**Adam Mukdad**  
+📧 [adammukdad97@gmail.com](mailto:adammukdad97@gmail.com)  
+🔗 [GitHub Portfolio](https://github.com/adammukdad)  
+🔗 [LinkedIn](https://www.linkedin.com/in/adammukdad/)  
