@@ -3,7 +3,13 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Enabled-red?logo=streamlit)
 ![Azure](https://img.shields.io/badge/Azure-Integrated-blue?logo=microsoftazure)
 ![AWS](https://img.shields.io/badge/AWS-Supported-orange?logo=amazonaws)
+![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![GitHub stars](https://img.shields.io/github/stars/adammukdad/aws-s3-auditor?style=social)
+![GitHub forks](https://img.shields.io/github/forks/adammukdad/aws-s3-auditor?style=social)
+![GitHub issues](https://img.shields.io/github/issues/adammukdad/aws-s3-auditor)
+![License](https://img.shields.io/badge/License-MIT-green)
 
+---
 
 Correlate and visualize AWS + Azure security events with a cross-cloud security monitoring dashboard built using Python and Streamlit.
 
