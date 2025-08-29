@@ -22,7 +22,7 @@ Correlate and visualize AWS + Azure security events with a cross-cloud security 
 - [Future Enhancements](#-future-enhancements)
 - [Challenges & Lessons Learned](#-challenges-and-lessons-learned)
 - [Key Takeaways for Hiring Managers](#-key-takeaways-for-hiring-managers)
-- [Author](#-built-by-adam-mukdad)
+- [Author](#-author)
 
 ---
 
