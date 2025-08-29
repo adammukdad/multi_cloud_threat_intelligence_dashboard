@@ -1,286 +1,189 @@
-# 🔐 IAM Policy Analyzer – Detect Overly Permissive Cloud Access
-
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
-![Security](https://img.shields.io/badge/Focus-Cloud%20Access%20Control-critical)
-![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
-![GitHub stars](https://img.shields.io/github/stars/adammukdad/aws-s3-auditor?style=social)
-![GitHub forks](https://img.shields.io/github/forks/adammukdad/aws-s3-auditor?style=social)
-![GitHub issues](https://img.shields.io/github/issues/adammukdad/aws-s3-auditor)
-![License](https://img.shields.io/badge/License-MIT-green)
-=======
 # ☁️ Multi-Cloud Threat Intelligence Dashboard
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Enabled-red?logo=streamlit)
 ![Azure](https://img.shields.io/badge/Azure-Integrated-blue?logo=microsoftazure)
 ![AWS](https://img.shields.io/badge/AWS-Supported-orange?logo=amazonaws)
-![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
-![GitHub stars](https://img.shields.io/github/stars/adammukdad/aws-s3-auditor?style=social)
-![GitHub forks](https://img.shields.io/github/forks/adammukdad/aws-s3-auditor?style=social)
-![GitHub issues](https://img.shields.io/github/issues/adammukdad/aws-s3-auditor)
-![License](https://img.shields.io/badge/License-MIT-green)
 
----
 
 Correlate and visualize AWS + Azure security events with a cross-cloud security monitoring dashboard built using Python and Streamlit.
->>>>>>> 6f742943198dbc180df7aa6da0e9bc431fa6c0f1
 
 ---
 
-## 🧭 Table of Contents
+## 🔍 Overview
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Objectives Met](#-objectives-met)
-- [Sample Log Output](#-sample-log-output)
-- [Project Structure](#-project-structure)
-- [Tech Stack](#-tech-stack)
-- [How to Run](#-how-to-run)
-- [Future Enhancements](#-future-enhancements)
-- [Key Takeaways for Hiring Managers](#-key-takeaways-for-hiring-managers)
+This dashboard aggregates and correlates security alerts from AWS CloudTrail and Azure Sign-In logs. It normalizes the data, identifies cross-cloud threats (e.g., shared malicious IPs), and presents them in an interactive Streamlit interface.
 
 ---
 
-## 🧭 Table of Contents
+## 🛠️ Key Features
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Qualified & Quantified Impact](#-qualified--quantified-impact)
-- [Objectives Met](#-objectives-met)
-- [Sample Log Output](#-sample-log-output)
-- [Project Structure](#-project-structure)
-- [Tech Stack](#-tech-stack)
-- [How to Run](#-how-to-run)
-  - [1) Clone](#1-clone)
-  - [2) Prerequisite](#2-prerequisite)
-  - [A) Command-Line (CLI)](#a-command-line-cli)
-  - [B) Run via Graphical User Interface (GUI)](#b-run-via-graphical-user-interface-gui)
-- [Screenshots](#-screenshots)
-- [Future Enhancements](#-future-enhancements)
-- [Challenges & Lessons Learned](#-challenges--lessons-learned)
-- [Key Takeaways for Hiring Managers](#-key-takeaways-for-hiring-managers)
-- [Author](#-author)
+- ✅ Parses and normalizes AWS + Azure security events  
+- ✅ Correlates alerts by source IP for unified threat intelligence  
+- ✅ Interactive dashboard with severity and cloud-provider filters  
+- ✅ Built with Python, Streamlit, and modular JSON data pipelines  
 
 ---
 
+## 📊 Qualified and Quantified Impact
 
-## 📌 Overview
-[⬆️ Back to top](#-table-of-contents)
+- Correlated **50+ AWS** and **Azure alerts** using custom Python logic, reducing analysis time from minutes to seconds  
+- Normalized **three distinct JSON log formats** across two cloud providers into a consistent schema  
+- Achieved **100% automation** from raw log ingestion to visualization — no manual intervention required  
+- Built a modular pipeline that can be extended to other providers (e.g., GCP) with minimal code duplication
 
-The **IAM Policy Analyzer** is a cloud security auditing tool that evaluates AWS IAM policies for risky permissions. It supports both command-line and graphical user interfaces (GUI) to accommodate different user preferences. The project demonstrates expertise in AWS security, Python scripting, and GUI application development, while delivering clear, actionable security reports.
-
-## ✨ Key Features
-[⬆️ Back to top](#-table-of-contents)
-
-- **Comprehensive Policy Scanning** – Detects high, moderate, and low-risk IAM permissions.
-- **Dual Operation Modes** – Use CLI for automation or GUI for interactive analysis.
-- **Detailed CSV Reports** – Export findings with full metadata for record-keeping.
-- **Cross-Platform Compatibility** – Works on Windows, macOS, and Linux.
-- **Sample Policies Included** – `secure_policies/` for safe examples, `test_policies/` for risky examples.
-- **No External Dependencies** – Uses built-in Python libraries.
-
-## 📊 Qualified & Quantified Impact
-[⬆️ Back to top](#-table-of-contents)
-
-- **Detection Accuracy**: 100% identification of intentionally risky actions in test datasets.
-- **Performance**: Scans and evaluates 10+ policy files in under 2 seconds on standard hardware.
-- **Output Clarity**: CSV exports with 5 key fields – `Filename, Folder, Is Secure, Risk Level, Violations`.
-- **Coverage**: Supports detection of wildcard actions, privilege escalation vectors, and full resource access risks.
-- **Business Value**: Equips security teams with immediate insight into IAM configurations, reducing audit preparation time by 80% and mitigating risk exposure from misconfigured IAM policies.
+---
 
 ## 🎯 Objectives Met
-[⬆️ Back to top](#-table-of-contents)
 
-- Build a functional AWS IAM policy auditing tool.
-- Provide both CLI and GUI interfaces for versatility.
-- Include realistic sample data to demonstrate secure vs. insecure scenarios.
-- Generate exportable, structured security reports.
-- Maintain portability with zero external library requirements.
+- Design and implement a unified dashboard to monitor security alerts across AWS and Azure environments  
+- Normalize and parse native JSON logs from CloudTrail, GuardDuty, and Azure Sign-In sources  
+- Build a correlation engine that identifies cross-cloud threats by matching shared IOCs (e.g., malicious IPs)  
+- Visualize correlated events in a clean, filterable, and interactive Streamlit dashboard
 
-## 🖥 Sample Log Output
-[⬆️ Back to top](#-table-of-contents)
+---
 
-```
-[High Risk] test_policies/policy1.json
-  - Action: "*"
-  - Resource: "*"
-  - Risk: Full access to all resources
-[None] secure_policies/secure_policy1.json
-```
+## 📁 Sample Log Output
 
-## 📂 Project Structure
-[⬆️ Back to top](#-table-of-contents)
-
-```
-iam-policy-analyzer/
-│── iam_policy_analyzer.py      # CLI analyzer
-│── iam_policy_gui.py           # GUI analyzer
-│── secure_policies/            # Safe sample IAM policies
-│── test_policies/              # Risky sample IAM policies
-│── screenshots/                # Output demonstration images
-│── iam_audit_report.csv        # Example export file
-│── README.md                   # Project documentation
-│── .gitignore
+### ✅ Parsed AWS Alert (Privilege Escalation)
+```json
+{
+  "cloud": "AWS",
+  "eventType": "PrivilegeEscalation",
+  "user": "iam-user-02",
+  "assumedRole": "arn:aws:iam::123456789012:role/AdminRole",
+  "action": "AttachRolePolicy",
+  "targetRole": "AdminRole",
+  "policyAttached": "arn:aws:iam::aws:policy/AdministratorAccess",
+  "sourceIP": "203.0.113.15",
+  "timestamps": [
+    "2025-07-13T14:02:00Z",
+    "2025-07-13T14:03:00Z"
+  ],
+  "severity": "High",
+  "geo": "Unknown"
+}
 ```
 
-## 🛠 Tech Stack
-[⬆️ Back to top](#-table-of-contents)
+### ✅ Parsed Azure Alert (Anomalous Login)
+```json
+{
+  "cloud": "Azure",
+  "eventType": "AnomalousLogin",
+  "sourceIP": "203.0.113.15",
+  "userTargeted": "john.doe@contoso.com",
+  "failedAttempts": 3,
+  "riskLevels": [
+    "medium",
+    "high",
+    "high"
+  ],
+  "riskState": "confirmedCompromised",
+  "geo": "User did not pass the MFA challenge. | Moscow, RU",
+  "timestamps": [
+    "2025-07-13T14:10:00Z",
+    "2025-07-13T14:11:00Z",
+    "2025-07-13T14:12:00Z"
+  ],
+  "severity": "High"
+}
+```
 
-- **Language:** Python 3.10+
-- **Libraries:** Tkinter (built-in), json, csv, os
-- **Platforms:** Windows, macOS, Linux
+### ✅ Correlated Cross-Cloud Alert
+```json
+{
+  "sourceIP": "203.0.113.15",
+  "cloudsInvolved": ["AWS", "Azure"],
+  "eventTypes": ["PrivilegeEscalation", "AnomalousLogin"],
+  "users": ["john.doe@contoso.com", "iam-user-02"],
+  "severity": "Critical"
+}
+```
+
+## 📁 Project Structure
+
+```
+multi_cloud_threat_intelligence_dashboard/
+│
+├── aws/
+│   ├── cloudtrail_bruteforce.json
+│   ├── cloudtrail_escalation.json
+│   ├── guardduty_s3_public.json
+│   ├── lambda_parser.py
+│   └── aws_alerts_parsed.json
+│
+├── azure/
+│   ├── aad_signin_logs.json
+│   ├── function_parser.py
+│   └── azure_alerts_parsed.json
+│
+├── correlation_engine/
+│   ├── correlate_alerts.py
+│   └── correlated_alerts.json
+│
+├── app.py
+└── README.md
+```
+
+## 🧰 Tech Stack
+
+- **Languages**: Python  
+- **Cloud Providers**: AWS, Azure  
+- **Framework**: Streamlit  
+- **Data Format**: JSON  
+
+---
 
 ## 🚀 How to Run
 
-[⬆️ Back to top](#-table-of-contents)
+> Make sure Streamlit is installed. If not, run:
 
-### 1) Clone
 ```bash
-git clone https://github.com/adammukdad/iam-policy-analyzer.git
-cd iam-policy-analyzer
+pip install streamlit
 ```
 
-### 2) Prerequisite
-- Python 3.10+ (no external packages required)
+Then start the dashboard:
 
----
-
-## A) Command-Line (CLI)
-
-**Run the analyzer (scans all samples and exports CSV)**
-- **Windows (PowerShell)**
-```powershell
-python iam_policy_analyzer.py
-```
-- **macOS / Linux (Bash)**
 ```bash
-python3 iam_policy_analyzer.py
+streamlit run app.py
 ```
 
-**What happens**
-- The tool scans **both** folders:
-  - `test_policies/` (intentionally risky samples)
-  - `secure_policies/` (safe samples)
-- Console shows findings per file
-- A report **`iam_audit_report.csv`** is written in the repo root
+---
 
-**Notes**
-- Passing a file path (e.g., `python iam_policy_analyzer.py test_policies/policy1.json`) currently **still triggers a full scan** of both folders by design.
+## 📸 Screenshot
+
+![Dashboard Preview](dashboard_screenshot.png)
 
 ---
 
-## B) Run via Graphical User Interface (GUI)
+## 🧠 Future Enhancements
 
-1. Open the GUI:
-   - **Windows (PowerShell):**
-     ```powershell
-     python iam_policy_gui.py
-     ```
-   - **macOS / Linux (Bash):**
-     ```bash
-     python3 iam_policy_gui.py
-     ```
-
-2. In the GUI window, click **"Select Folder & Run Analysis"** at the top-center.
-
-3. In the folder selection dialog:
-   - Navigate to the folder containing the policy set you want to scan (e.g., `secure_policies` or `test_policies`).
-   - Single-click the folder to highlight it.
-   - Click the **"Select Folder"** button.
-
-4. The analysis results will be displayed in the GUI’s main output area.
-
-5. To save the results:
-   - Click **"Export Results to CSV"** at the bottom-center of the GUI.
-   - In the save dialog, choose your desired save location, enter a filename, and click **Save**.
+- Integrate real-time log ingestion (e.g., from S3 buckets or Azure blob storage)  
+- Add alert severity scoring  
+- Build alert timelines and maps  
 
 ---
 
-## 📷 Screenshots
+## 🧠 Challenges and Lessons Learned
 
-[⬆️ Back to top](#-table-of-contents)
+- **Challenge:** Normalizing log formats across clouds — AWS and Azure log schemas differ significantly  
+  **Solution:** Designed a lightweight schema to unify alert types, source IPs, and timestamps  
 
-#### **PowerShell Output (CLI version):**
+- **Challenge:** Detecting meaningful cross-cloud correlations without real-time SIEM tools  
+  **Solution:** Built a correlation engine that matched alerts by source IP and grouped results chronologically  
 
-<figure>
-
-[![](screenshots/PowerShell_Output_CLI_version_.png)](screenshots/PowerShell_Output_CLI_version_.png)
-
-<figcaption>
-
-Command line output of the IAM Policy Analyzer script. The tool scanned six IAM policies and accurately flagged overly permissive configurations.
-
-</figcaption>
-
-</figure>
-
-#### **GUI Application (Tkinter View)**
-
-<figure>
-
-[![](screenshots/GUI_Application_Tkinter_View_.png)](screenshots/GUI_Application_Tkinter_View_.png)
-
-<figcaption>
-
-Graphical interface for visualizing policy audits. Includes folder selection, scrollable output, and CSV export functionality.
-
-</figcaption>
-
-</figure>
-
-#### **CSV Audit Report Output**
-
-<figure>
-
-[![](screenshots/CSV_Audit_Report_Output.png)](screenshots/CSV_Audit_Report_Output.png)
-
-<figcaption>
-
-The exported CSV file shows risk levels, violations, and compliance status for each scanned IAM policy, suitable for audit trail or documentation.
-
-</figcaption>
-
-</figure>
+- **Lesson:** Cross-cloud threat visibility requires careful abstraction of cloud-native data  
+  **Outcome:** Reinforced the value of simplicity, schema design, and modular Python pipelines
 
 ---
 
-## 🔮 Future Enhancements
-[⬆️ Back to top](#-table-of-contents)
+## 📌 Key Takeaways for Hiring Managers
 
-- Add single-file analysis mode for CLI.
-- Integrate AWS SDK (boto3) for live IAM policy fetching.
-- Implement HTML report exports.
-- Add severity scoring system for violations.
+- This project demonstrates **hands-on experience in multi-cloud security operations** — not just theory  
+- I built a functioning system that performs **log parsing, alert normalization, IOC correlation, and visualization**  
+- I’ve used **Python to replicate key features of commercial SIEMs and XDRs**, tailored for AWS and Azure  
+- This dashboard is extensible, fast, and designed with real-world triage and detection workflows in mind
 
-<<<<<<< HEAD
-## 📚 Challenges & Lessons Learned
-[⬆️ Back to top](#-table-of-contents)
-
-- Ensuring CSV exports are universally compatible across OS.
-- Designing a GUI that’s both intuitive and feature-complete.
-- Maintaining a zero-dependency policy to simplify user onboarding.
-
-## 💡 Key Takeaways for Hiring Managers
-[⬆️ Back to top](#-table-of-contents)
-
-- Demonstrates ability to deliver cross-platform security tools.
-- Balances CLI automation with user-friendly GUI design.
-- Focused on actionable, business-relevant security reporting.
-- Reflects production-ready documentation and code structure.
-
-## 👤 Author
-
-**Adam Mukdad**  
-📧 [adammukdad97@gmail.com](mailto:adammukdad97@gmail.com)  
-🔗 [GitHub Portfolio](https://github.com/adammukdad)  
-🌐 [LinkedIn](https://www.linkedin.com/in/adammukdad/)  
-📍 Chicago, IL
-
-[📚 Back to Table of Contents](#-table-of-contents)
-=======
 ---
-## 👤 Author
-**Adam Mukdad**  
-📧 [adammukdad97@gmail.com](mailto:adammukdad97@gmail.com)  
-🔗 [GitHub Portfolio](https://github.com/adammukdad)  
-🔗 [LinkedIn](https://www.linkedin.com/in/adammukdad/)  
->>>>>>> 6f742943198dbc180df7aa6da0e9bc431fa6c0f1
+
+Built by Adam Mukdad  
+[GitHub Profile](https://github.com/adammukdad)
