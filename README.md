@@ -9,6 +9,24 @@ Correlate and visualize AWS + Azure security events with a cross-cloud security 
 
 ---
 
+## 📚 Table of Contents
+- [Overview](#-overview)
+- [Key Features](#️-key-features)
+- [Qualified & Quantified Impact](#-qualified-and-quantified-impact)
+- [Objectives Met](#-objectives-met)
+- [Sample Log Output](#-sample-log-output)
+- [Project Structure](#-project-structure)
+- [Tech Stack](#-tech-stack)
+- [How to Run](#-how-to-run)
+- [Screenshot](#-screenshot)
+- [Future Enhancements](#-future-enhancements)
+- [Challenges & Lessons Learned](#-challenges-and-lessons-learned)
+- [Key Takeaways for Hiring Managers](#-key-takeaways-for-hiring-managers)
+- [Author](#-built-by-adam-mukdad)
+
+---
+
+
 ## 🔍 Overview
 
 This dashboard aggregates and correlates security alerts from AWS CloudTrail and Azure Sign-In logs. It normalizes the data, identifies cross-cloud threats (e.g., shared malicious IPs), and presents them in an interactive Streamlit interface.
