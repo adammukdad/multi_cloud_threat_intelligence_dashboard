@@ -29,11 +29,17 @@ Correlate and visualize AWS + Azure security events with a cross-cloud security 
 
 ## 🔍 Overview
 
+[⬆️ Back to top](#-table-of-contents)
+
+
 This dashboard aggregates and correlates security alerts from AWS CloudTrail and Azure Sign-In logs. It normalizes the data, identifies cross-cloud threats (e.g., shared malicious IPs), and presents them in an interactive Streamlit interface.
 
 ---
 
 ## 🛠️ Key Features
+
+[⬆️ Back to top](#-table-of-contents)
+
 
 - ✅ Parses and normalizes AWS + Azure security events  
 - ✅ Correlates alerts by source IP for unified threat intelligence  
@@ -44,6 +50,9 @@ This dashboard aggregates and correlates security alerts from AWS CloudTrail and
 
 ## 📊 Qualified and Quantified Impact
 
+[⬆️ Back to top](#-table-of-contents)
+
+
 - Correlated **50+ AWS** and **Azure alerts** using custom Python logic, reducing analysis time from minutes to seconds  
 - Normalized **three distinct JSON log formats** across two cloud providers into a consistent schema  
 - Achieved **100% automation** from raw log ingestion to visualization — no manual intervention required  
@@ -53,6 +62,9 @@ This dashboard aggregates and correlates security alerts from AWS CloudTrail and
 
 ## 🎯 Objectives Met
 
+[⬆️ Back to top](#-table-of-contents)
+
+
 - Design and implement a unified dashboard to monitor security alerts across AWS and Azure environments  
 - Normalize and parse native JSON logs from CloudTrail, GuardDuty, and Azure Sign-In sources  
 - Build a correlation engine that identifies cross-cloud threats by matching shared IOCs (e.g., malicious IPs)  
@@ -61,6 +73,9 @@ This dashboard aggregates and correlates security alerts from AWS CloudTrail and
 ---
 
 ## 📁 Sample Log Output
+
+[⬆️ Back to top](#-table-of-contents)
+
 
 ### ✅ Parsed AWS Alert (Privilege Escalation)
 ```json
@@ -119,6 +134,9 @@ This dashboard aggregates and correlates security alerts from AWS CloudTrail and
 
 ## 📁 Project Structure
 
+[⬆️ Back to top](#-table-of-contents)
+
+
 ```
 multi_cloud_threat_intelligence_dashboard/
 │
@@ -144,6 +162,9 @@ multi_cloud_threat_intelligence_dashboard/
 
 ## 🧰 Tech Stack
 
+[⬆️ Back to top](#-table-of-contents)
+
+
 - **Languages**: Python  
 - **Cloud Providers**: AWS, Azure  
 - **Framework**: Streamlit  
@@ -152,6 +173,9 @@ multi_cloud_threat_intelligence_dashboard/
 ---
 
 ## 🚀 How to Run
+
+[⬆️ Back to top](#-table-of-contents)
+
 
 > Make sure Streamlit is installed. If not, run:
 
@@ -169,11 +193,17 @@ streamlit run app.py
 
 ## 📸 Screenshot
 
+[⬆️ Back to top](#-table-of-contents)
+
+
 ![Dashboard Preview](dashboard_screenshot.png)
 
 ---
 
 ## 🧠 Future Enhancements
+
+[⬆️ Back to top](#-table-of-contents)
+
 
 - Integrate real-time log ingestion (e.g., from S3 buckets or Azure blob storage)  
 - Add alert severity scoring  
@@ -182,6 +212,9 @@ streamlit run app.py
 ---
 
 ## 🧠 Challenges and Lessons Learned
+
+[⬆️ Back to top](#-table-of-contents)
+
 
 - **Challenge:** Normalizing log formats across clouds — AWS and Azure log schemas differ significantly  
   **Solution:** Designed a lightweight schema to unify alert types, source IPs, and timestamps  
@@ -195,6 +228,9 @@ streamlit run app.py
 ---
 
 ## 📌 Key Takeaways for Hiring Managers
+
+[⬆️ Back to top](#-table-of-contents)
+
 
 - This project demonstrates **hands-on experience in multi-cloud security operations** — not just theory  
 - I built a functioning system that performs **log parsing, alert normalization, IOC correlation, and visualization**  
