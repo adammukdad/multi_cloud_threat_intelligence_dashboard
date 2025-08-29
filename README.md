@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔐 IAM Policy Analyzer – Detect Overly Permissive Cloud Access
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)
@@ -7,6 +8,22 @@
 ![GitHub forks](https://img.shields.io/github/forks/adammukdad/aws-s3-auditor?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/adammukdad/aws-s3-auditor)
 ![License](https://img.shields.io/badge/License-MIT-green)
+=======
+# ☁️ Multi-Cloud Threat Intelligence Dashboard
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Enabled-red?logo=streamlit)
+![Azure](https://img.shields.io/badge/Azure-Integrated-blue?logo=microsoftazure)
+![AWS](https://img.shields.io/badge/AWS-Supported-orange?logo=amazonaws)
+![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![GitHub stars](https://img.shields.io/github/stars/adammukdad/aws-s3-auditor?style=social)
+![GitHub forks](https://img.shields.io/github/forks/adammukdad/aws-s3-auditor?style=social)
+![GitHub issues](https://img.shields.io/github/issues/adammukdad/aws-s3-auditor)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
+
+Correlate and visualize AWS + Azure security events with a cross-cloud security monitoring dashboard built using Python and Streamlit.
+>>>>>>> 6f742943198dbc180df7aa6da0e9bc431fa6c0f1
 
 ---
 
@@ -235,6 +252,7 @@ The exported CSV file shows risk levels, violations, and compliance status for e
 - Implement HTML report exports.
 - Add severity scoring system for violations.
 
+<<<<<<< HEAD
 ## 📚 Challenges & Lessons Learned
 [⬆️ Back to top](#-table-of-contents)
 
@@ -259,3 +277,11 @@ The exported CSV file shows risk levels, violations, and compliance status for e
 📍 Chicago, IL
 
 [📚 Back to Table of Contents](#-table-of-contents)
+=======
+---
+## 👤 Author
+**Adam Mukdad**  
+📧 [adammukdad97@gmail.com](mailto:adammukdad97@gmail.com)  
+🔗 [GitHub Portfolio](https://github.com/adammukdad)  
+🔗 [LinkedIn](https://www.linkedin.com/in/adammukdad/)  
+>>>>>>> 6f742943198dbc180df7aa6da0e9bc431fa6c0f1
