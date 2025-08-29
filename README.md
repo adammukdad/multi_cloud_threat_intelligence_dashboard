@@ -246,3 +246,5 @@ streamlit run app.py
 🔗 [GitHub Portfolio](https://github.com/adammukdad)  
 🌐 [LinkedIn](https://www.linkedin.com/in/adammukdad/)  
 📍 Chicago, IL
+
+[📚 Back to Table of Contents](#-table-of-contents)
