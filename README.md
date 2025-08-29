@@ -5,10 +5,10 @@
 ![AWS](https://img.shields.io/badge/AWS-Supported-orange?logo=amazonaws)
 ![Security](https://img.shields.io/badge/Category-Security%20Tool-red)
 ![Platforms](https://img.shields.io/badge/OS-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
-[![GitHub stars](https://img.shields.io/github/stars/adammukdad/log-scanner-python?style=social)](https://github.com/adammukdad/log-scanner-python/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/adammukdad/log-scanner-python?style=social)](https://github.com/adammukdad/log-scanner-python/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/adammukdad/log-scanner-python)](https://github.com/adammukdad/log-scanner-python/issues)
-[![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/adammukdad/log-scanner-python/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/adammukdad/multi_cloud_threat_intelligence_dashboard?style=social)](https://github.com/adammukdad/multi_cloud_threat_intelligence_dashboard/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/adammukdad/multi_cloud_threat_intelligence_dashboard?style=social)](https://github.com/adammukdad/multi_cloud_threat_intelligence_dashboard/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/adammukdad/multi_cloud_threat_intelligence_dashboard)](https://github.com/adammukdad/multi_cloud_threat_intelligence_dashboard/issues)
+[![License](https://img.shields.io/badge/License-MIT-green)](https://github.com/adammukdad/multi_cloud_threat_intelligence_dashboard/blob/main/LICENSE)
 
 
 Correlate and visualize AWS + Azure security events with a cross-cloud security monitoring dashboard built using Python and Streamlit.
